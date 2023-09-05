@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fight Prediction</title>
+</head>
+<body>
+    <h1>Fight Prediction</h1>
+    <form method="POST" action="/">
+        <label for="kd">KD:</label>
+        <input type="text" name="kd" required><br><br>
+
+        <label for="opponent_kd">Opponent KD:</label>
+        <input type="text" name="opponent_kd" required><br><br>
+
+        <label for="user_input_sig_str">Sig. str. %:</label>
+        <input type="text" name="user_input_sig_str" required><br><br>
+
+        <label for="user_input_opponent_sig_str">Opponent Sig. str. %:</label>
+        <input type="text" name="user_input_opponent_sig_str" required><br><br>
+
+        <label for="user_input_td">Td %:</label>
+        <input type="text" name="user_input_td" required><br><br>
+
+        <label for="user_input_opponent_td">Opponent Td %:</label>
+        <input type="text" name="user_input_opponent_td" required><br><br>
+
+        <label for="user_input_sub_att">Sub. att:</label>
+        <input type="text" name="user_input_sub_att" required><br><br>
+
+        <label for="user_input_opponent_sub_att">Opponent Sub. att:</label>
+        <input type="text" name="user_input_opponent_sub_att" required><br><br>
+
+        <label for="user_input_rev">Rev.:</label>
+        <input type="text" name="user_input_rev" required><br><br>
+
+        <label for="user_input_opponent_rev">Opponent Rev.:</label>
+        <input type="text" name="user_input_opponent_rev" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if result %}
+        <h2>Prediction Result: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
